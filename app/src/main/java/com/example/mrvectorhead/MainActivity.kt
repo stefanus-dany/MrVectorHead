@@ -24,7 +24,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var CEyes: Button
     private lateinit var CMoustache: Button
     private lateinit var CBeard: Button
-    private var SELECT_IMAGE_CODE = 1
     private lateinit var option: ImageView
     var svBody: Uri? = null
     var svHair: Uri? = null
@@ -64,9 +63,6 @@ class MainActivity : AppCompatActivity() {
             svMoutache = savedInstanceState.getParcelable("moustache")
             svBeard = savedInstanceState.getParcelable("beard")
         }
-
-
-
 
         CHead.setOnClickListener {
             option = body
@@ -138,14 +134,6 @@ class MainActivity : AppCompatActivity() {
             beard.setImageURI(uri)
     }}
 
-
-//        if (savedInstanceState != null) {
-//            var image = savedInstanceState.getParcelableExtra("BitmapImage") as Bitmap
-//            var images = savedInstanceState.getParce
-//        } else {
-//            image = yourBitmapImage
-//        }
-
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         outState.putParcelable("bodyImage", svBody)
@@ -155,7 +143,6 @@ class MainActivity : AppCompatActivity() {
         outState.putParcelable("moustache", svMoutache)
         outState.putParcelable("beard", svBeard)
     }
-
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
