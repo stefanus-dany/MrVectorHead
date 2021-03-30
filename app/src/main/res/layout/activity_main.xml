@@ -54,7 +54,6 @@
             android:layout_width="81dp"
             android:layout_height="20dp"
             android:layout_marginTop="36dp"
-            
             app:layout_constraintEnd_toEndOf="@+id/body"
             app:layout_constraintStart_toStartOf="@+id/body"
             app:layout_constraintTop_toTopOf="@+id/body"
@@ -64,7 +63,6 @@
             android:id="@+id/eye"
             android:layout_width="100dp"
             android:layout_height="47dp"
-            
             app:layout_constraintEnd_toEndOf="@+id/body"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="@+id/body"
@@ -77,7 +75,6 @@
             android:layout_height="130dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="2dp"
-            
             app:layout_constraintBottom_toBottomOf="@+id/body"
             app:layout_constraintEnd_toEndOf="@+id/body"
             app:layout_constraintHorizontal_bias="0.497"
@@ -89,7 +86,6 @@
             android:id="@+id/moustache"
             android:layout_width="193dp"
             android:layout_height="60dp"
-            
             app:layout_constraintEnd_toEndOf="@+id/body"
             app:layout_constraintStart_toStartOf="@+id/body"
             app:layout_constraintTop_toBottomOf="@+id/eye"
@@ -100,7 +96,7 @@
             android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            android:text="Head"
+            android:text="Body"
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -117,10 +113,10 @@
             app:layout_constraintTop_toBottomOf="@+id/CHead" />
 
         <Button
-            android:id="@+id/CMoustache"
+            android:id="@+id/CEyebrow"
             android:layout_width="110dp"
             android:layout_height="wrap_content"
-            android:text="Moustache"
+            android:text="Eyebrow"
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -134,13 +130,13 @@
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/CMoustache" />
+            app:layout_constraintTop_toBottomOf="@+id/CEyebrow" />
 
         <Button
-            android:id="@+id/CEyebrow"
+            android:id="@+id/CMoustache"
             android:layout_width="110dp"
             android:layout_height="wrap_content"
-            android:text="Eyebrow"
+            android:text="Moustache"
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -154,8 +150,7 @@
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/CEyebrow" />
-
+            app:layout_constraintTop_toBottomOf="@+id/CMoustache" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
