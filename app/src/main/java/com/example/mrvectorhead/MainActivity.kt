@@ -25,12 +25,12 @@ class MainActivity : AppCompatActivity() {
     private lateinit var CMoustache: Button
     private lateinit var CBeard: Button
     private lateinit var option: ImageView
-    var svBody: Uri? = null
-    var svHair: Uri? = null
-    var svEyebrow: Uri? = null
-    var svEye: Uri? = null
-    var svMoutache: Uri? = null
-    var svBeard: Uri? = null
+    private var svBody: Uri? = null
+    private var svHair: Uri? = null
+    private var svEyebrow: Uri? = null
+    private var svEye: Uri? = null
+    private var svMoutache: Uri? = null
+    private var svBeard: Uri? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -80,7 +80,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         CEyes.setOnClickListener {
-
             option = eyes
             move(4)
         }
@@ -144,14 +143,14 @@ class MainActivity : AppCompatActivity() {
         outState.putParcelable("beard", svBeard)
     }
 
-    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
-        super.onRestoreInstanceState(savedInstanceState)
-        body.setImageURI(savedInstanceState.getParcelable("bodyImage"))
-        hair.setImageURI(savedInstanceState.getParcelable("hairImage"))
-        eyebrow.setImageURI(savedInstanceState.getParcelable("eyebrowImage"))
-        eyes.setImageURI(savedInstanceState.getParcelable("eyes"))
-        moustache.setImageURI(savedInstanceState.getParcelable("moustache"))
-        beard.setImageURI(savedInstanceState.getParcelable("beard"))
-    }
+//    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+//        super.onRestoreInstanceState(savedInstanceState)
+//        body.setImageURI(savedInstanceState.getParcelable("bodyImage"))
+//        hair.setImageURI(savedInstanceState.getParcelable("hairImage"))
+//        eyebrow.setImageURI(savedInstanceState.getParcelable("eyebrowImage"))
+//        eyes.setImageURI(savedInstanceState.getParcelable("eyes"))
+//        moustache.setImageURI(savedInstanceState.getParcelable("moustache"))
+//        beard.setImageURI(savedInstanceState.getParcelable("beard"))
+//    }
 }
 
