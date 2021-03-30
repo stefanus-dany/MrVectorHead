@@ -63,79 +63,79 @@ class MainActivity : AppCompatActivity() {
             svEye = savedInstanceState.getParcelable("eyes")
             svMoutache = savedInstanceState.getParcelable("moustache")
             svBeard = savedInstanceState.getParcelable("beard")
-
         }
 
 
-        CHair.setOnClickListener {
-            option = hair
-            move()
-        }
+
 
         CHead.setOnClickListener {
             option = body
-            move()
+            move(1)
+        }
+
+        CHair.setOnClickListener {
+            option = hair
+            move(2)
         }
 
         CEyebrow.setOnClickListener {
             option = eyebrow
-            move()
+            move(3)
         }
 
         CEyes.setOnClickListener {
 
             option = eyes
-            move()
+            move(4)
         }
 
         CMoustache.setOnClickListener {
 
             option = moustache
-            move()
+            move(5)
         }
 
         CBeard.setOnClickListener {
 
             option = beard
-            move()
+            move(6)
         }
 
     }
 
-    fun move() {
+    fun move(angka : Int) {
         var intent = Intent()
         intent.setType("image/*")
         intent.setAction(Intent.ACTION_GET_CONTENT)
-        startActivityForResult(Intent.createChooser(intent, "Title"), SELECT_IMAGE_CODE)
-
+        startActivityForResult(Intent.createChooser(intent, "Title"), angka)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == 1 && option == body) {
+        if (requestCode == 1) {
             var uri = data?.data
             svBody = uri
-            option.setImageURI(uri)
-        } else if (requestCode == 1 && option == hair) {
+            body.setImageURI(uri)
+        } else if (requestCode == 2) {
             var uri = data?.data
             svHair = uri
-            option.setImageURI(uri)
-        } else if (requestCode == 1 && option == eyebrow) {
+            hair.setImageURI(uri)
+        } else if (requestCode == 3) {
             var uri = data?.data
             svEyebrow = uri
-            option.setImageURI(uri)
-        }else if (requestCode == 1 && option == eyes) {
+            eyebrow.setImageURI(uri)
+        }else if (requestCode == 4) {
             var uri = data?.data
             svEye = uri
-            option.setImageURI(uri)
-        }else if (requestCode == 1 && option == moustache) {
+            eyes.setImageURI(uri)
+        }else if (requestCode == 5) {
             var uri = data?.data
             svMoutache = uri
-            option.setImageURI(uri)
-        }else if (requestCode == 1 && option == beard) {
+            moustache.setImageURI(uri)
+        }else if (requestCode == 6) {
             var uri = data?.data
             svBeard = uri
-            option.setImageURI(uri)
+            beard.setImageURI(uri)
     }}
 
 
@@ -157,14 +157,14 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-//    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
-//        super.onRestoreInstanceState(savedInstanceState)
-//        body.setImageURI(savedInstanceState.getParcelable("bodyImage"))
-//        hair.setImageURI(savedInstanceState.getParcelable("hairImage"))
-//        eyebrow.setImageURI(savedInstanceState.getParcelable("eyebrowImage"))
-//        eyes.setImageURI(savedInstanceState.getParcelable("eyes"))
-//        moustache.setImageURI(savedInstanceState.getParcelable("moustache"))
-//        beard.setImageURI(savedInstanceState.getParcelable("beard"))
-//    }
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        body.setImageURI(savedInstanceState.getParcelable("bodyImage"))
+        hair.setImageURI(savedInstanceState.getParcelable("hairImage"))
+        eyebrow.setImageURI(savedInstanceState.getParcelable("eyebrowImage"))
+        eyes.setImageURI(savedInstanceState.getParcelable("eyes"))
+        moustache.setImageURI(savedInstanceState.getParcelable("moustache"))
+        beard.setImageURI(savedInstanceState.getParcelable("beard"))
+    }
 }
 
