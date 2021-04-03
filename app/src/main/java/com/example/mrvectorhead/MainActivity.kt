@@ -98,7 +98,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun move(angka : Int) {
+    fun move(angka: Int) {
         var intent = Intent()
         intent.setType("image/*")
         intent.setAction(Intent.ACTION_GET_CONTENT)
@@ -119,19 +119,20 @@ class MainActivity : AppCompatActivity() {
             var uri = data?.data
             svEyebrow = uri
             eyebrow.setImageURI(uri)
-        }else if (requestCode == 4) {
+        } else if (requestCode == 4) {
             var uri = data?.data
             svEye = uri
             eyes.setImageURI(uri)
-        }else if (requestCode == 5) {
+        } else if (requestCode == 5) {
             var uri = data?.data
             svMoutache = uri
             moustache.setImageURI(uri)
-        }else if (requestCode == 6) {
+        } else if (requestCode == 6) {
             var uri = data?.data
             svBeard = uri
             beard.setImageURI(uri)
-    }}
+        }
+    }
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
